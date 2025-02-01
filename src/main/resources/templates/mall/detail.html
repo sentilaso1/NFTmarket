@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="mall/header::head-fragment('NFTmarket-Product Details','detail')">
+</head>
+<body>
+<header th:replace="mall/header::header-fragment"></header>
+
+<div id="detail">
+    <!-- nav -->
+    <nav th:replace="mall/header::nav-fragment"></nav>
+
+    <div class="dc">
+        <div class="content w">
+            <div class="title fl">Product Details</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="intro mt20 w clearfix">
+        <div class="left fl" style="position: relative;">
+            <div class="swiper-container fl">
+                <img th:src="@{${goodsDetail.goodsCoverImg}}">
+            </div>
+        </div>
+        <div class="right fr">
+            <div class="h3 ml20 mt20" th:text="${goodsDetail.goodsName}">NFTmarket</div>
+            <div class="sub_title mr40 ml20 mt10" th:text="${goodsDetail.goodsIntro}">NFTmarket</div>
+            <div class="item_price mr40 ml20 mt10">
+                <th:block th:text="${goodsDetail.sellingPrice}+'.00 DTH'"></th:block>
+                <del>
+                    <th:block th:text="${goodsDetail.originalPrice}+'.00 DTH'"></th:block>
+                </del>
+            </div>
+
+            <div class="order">
+                <input class="car" type="button" th:onclick="'saveAndGoCart('+${goodsDetail.goodsId}+')'" value="Buy Now" />
+                <input class="car" type="button" th:onclick="'saveToCart('+${goodsDetail.goodsId}+')'" value="Add to Cart" />
+            </div>
+            <div class="tb-extra ml20" id="J_tbExtra">
+                <dl>
+                    <dt>Commitment</dt>
+                    <dd><a class="J_Cont" title="Under the premise of meeting the 7-day no-reason return and exchange request, 
+                         for free shipping products, the buyer needs to bear the return shipping fee, 
+                         for non-free shipping products, the buyer needs to bear the shipping and return shipping fees." href="#"
+                            target="_blank"><img th:src="@{/mall/image/7d.jpg}">7-Day No Reason</a></dd>
+                </dl>
+                <dl>
+                    <dt>Payment</dt>
+                    <dd><a href="##" target="_blank"><img th:src="@{/mall/image/hua.png}">Ant Credit Pay</a><a href="##"
+                            target="_blank"><img th:src="@{/mall/image/card.png}">Credit Card Payment</a><a href="##"
+                            target="_blank"><img th:src="@{/mall/image/ji.png}">Points</a></dd>
+                </dl>
+                <dl>
+                    <dt>Support</dt>
+                    <dd>Trade-in, buying new saves more money. <a style="float:none;text-decoration: underline;"
+                            href="##">Details</a></dd>
+                </dl>
+            </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!-- Here we use the th:utext tag because th:text will not parse HTML, whereas th:utext will -->
+    <div class="goods mt20 w clearfix" th:utext="${goodsDetail.goodsDetailContent}">
+    </div>
+</div>
+
+<div th:replace="mall/footer::footer-fragment"></div>
+
+<!-- jQuery -->
+<script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
+<script th:src="@{/admin/plugins/sweetalert2/sweetalert2.all.min.js}"></script>
+<script th:src="@{/mall/js/search.js}" type="text/javascript"></script>
+<script type="text/javascript">
+    /**
+     * Add to cart
+     */
+        function saveToCart(id) {
+            var goodsCount = 1;
+            var data = {
+                "goodsId": id,
+                "goodsCount": goodsCount
+            };
+            $.ajax({
+                type: 'POST',
+                url: '/shop-cart',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function (result) {
+                    if (result.resultCode == 200) {
+                        Swal.fire({
+                            title: "Confirmation Box",
+                            text: "Added Successfully",
+                            icon: "success", iconColor: "#1d953f",
+                            showCancelButton: true,
+                            confirmButtonText: 'Confirm',
+                            cancelButtonText: 'Cancel'
+                        }).then((flag) => {
+                            if (flag.value) {
+                                window.location.reload();
+                            }
+                        }
+                        );
+                    } else {
+                        Swal.fire({
+                            text: result.message,
+                            icon: "error", iconColor: "#f05b72",
+                        });
+                    }
+                },
+                error: function () {
+                    Swal.fire({
+                        text: "Operation Failed",
+                        icon: "error", iconColor: "#f05b72",
+                    });
+                }
+            });
+        }
+
+    /**
+     * Add to cart and redirect to cart page
+     */
+        function saveAndGoCart(id) {
+            var goodsCount = 1;
+            var data = {
+                "goodsId": id,
+                "goodsCount": goodsCount
+            };
+            $.ajax({
+                type: 'POST',
+                url: '/shop-cart',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function (result) {
+                    if (result.resultCode == 200) {
+                        Swal.fire({
+                            title: "Confirmation Box",
+                            text: "Item added to cart",
+                            icon: "success", iconColor: "#1d953f",
+                            showCancelButton: true,
+                            confirmButtonText: 'Go to Cart for Checkout',
+                            cancelButtonText: 'Stay on Current Page'
+                        }).then((flag) => {
+                            if (flag.value) {
+                                window.location.href = '/shop-cart';
+                            }
+                        }
+                        );
+                    } else {
+                        Swal.fire({
+                            text: result.message,
+                            icon: "error", iconColor: "#f05b72",
+                        });
+                    }
+                },
+                error: function () {
+                    Swal.fire({
+                        text: "Operation Failed",
+                        icon: "error", iconColor: "#f05b72",
+                    });
+                }
+            });
+        }
+</script>
+</body>
+</html>
