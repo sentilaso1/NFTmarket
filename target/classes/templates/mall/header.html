@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head-fragment(title,path)">
+    <meta charset="UTF-8">
+    <title>NFTmarket</title>
+    <link rel="stylesheet" th:href="@{/mall/css/swiper-bundle.min.css}">
+    <link rel="stylesheet" th:href="@{/mall/css/iconfont.css}">
+    <link rel="stylesheet" th:href="@{/mall/css/common.css}">
+    <link rel="stylesheet" th:href="@{/mall/styles/header.css}">
+    <link rel="stylesheet" th:href="@{'/mall/styles/'+${path}+'.css'}">
+    <link rel="stylesheet" th:href="@{/admin/plugins/sweetalert2/sweetalert2.min.css}"/>
+</head>
+<nav id="nav" th:fragment="nav-fragment">
+    <div class="banner_x center">
+        <a th:href="@{/index}" class="logo"><h1>NFTmarket</h1></a>
+        <div class="fr">
+            <div class="search">
+                <input class="text" type="text" id="keyword" autocomplete="off">
+                <div class="search_hot">
+                </div>
+            </div>
+            <div class="button iconfont icon-search" onclick="search()"></div>
+        </div>
+    </div>
+</nav>
+<header id="header" th:fragment="header-fragment">
+    <div class="center">
+        <ul class="fl">
+            <li><a th:href="@{/index}">NFTmarket</a></li>
+            <li><a th:href="@{/admin}">Backstage management system</a></li>
+        </ul>
+        <div class="fr">
+            <th:block th:unless="${session.newUser==null}">
+                <div class="user">
+                    <ul class="selector">
+                    <li>
+                        <a th:href="@{/personal}">
+                            Personal Center
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/orders}">
+                            My Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/logout}">
+                            Log Out
+                        </a>
+                    </li>
+                    </ul>
+                    <a href="##" class="username">
+                        <th:block th:text="${session.MallUser.nickName}"></th:block>
+                        <i class="iconfont icon-down"></i>
+                    </a>
+                </div>
+                <div class="shopcart">
+                    <a th:href="@{/shop-cart}" style="color: white;"><i class="iconfont icon-cart"></i>
+                        Cart(
+                        <th:block th:text="${session.MallUser.shopCartItemCount}"></th:block>
+                        )</a>
+                </div>
+            </th:block>
+            <th:block th:if="${session.MallUser==null}">
+                <ul class="login">
+                    <li><a th:href="@{/login}">Login</a></li>
+                    <li><a th:href="@{/register}">Register</a></li>
+                </ul>
+                <div class="shopcart">
+                    <a href="##" style="color: white;"><i class="iconfont icon-cart"></i>
+                        Shopping Cart(0)</a>
+                </div>
+            </th:block>
+        </div>
+    </div>
+</header>
+</html>
