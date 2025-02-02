@@ -3,7 +3,7 @@
 <aside th:fragment="sidebar-fragment(path)" class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a th:href="@{/admin/index}" class="brand-link">
-        <img th:src="@{/admin/dist/img/new-bee-logo-1.png}" alt="ssm-cluster Logo"
+        <img th:src="@{/admin/dist/img/market-logo-1.png}" alt="ssm-cluster Logo"
              class="brand-image img-circle elevation-3"
              style="opacity: .8">
         <span class="brand-text font-weight-light">NFTmarket</span>
@@ -35,7 +35,7 @@
                 </li>
                 <li class="nav-header">Homepage Configuration</li>
                 <li class="nav-item">
-                    <a th:href="@{/admin/carousels}" th:class="${path}=='newbee_mall_carousel'?'nav-link active':'nav-link'">
+                    <a th:href="@{/admin/carousels}" th:class="${path}=='carousel'?'nav-link active':'nav-link'">
                         <i class="nav-icon fa fa-file-image-o"></i>
                         <p>
                             Carousel Configuration
@@ -71,13 +71,13 @@
                 <li class="nav-header">Management Modules</li>
                 <li class="nav-item">
                     <a th:href="@{/admin/categories?parentId=0&categoryLevel=1&backParentId=0}"
-                        th:class="${path}=='newbee_mall_category'?'nav-link active':'nav-link'">
+                        th:class="${path}=='category'?'nav-link active':'nav-link'">
                         <i class="fa fa-list-alt nav-icon" aria-hidden="true"></i>
                         <p>Category Management</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a th:href="@{/admin/goods}" th:class="${path}=='newbee_mall_goods'?'nav-link active':'nav-link'">
+                    <a th:href="@{/admin/goods}" th:class="${path}=='goods'?'nav-link active':'nav-link'">
                         <i class="fa fa-archive nav-icon" aria-hidden="true"></i>
                         <p>Product Management</p>
                     </a>

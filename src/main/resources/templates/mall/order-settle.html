@@ -72,7 +72,7 @@
                                             <td class="col col-name">
                                                 <p class="name">
                                                     <a target="_blank" th:href="@{'/goods/detail/'+${item.goodsId}}"
-                                                       th:text="${item.goodsName}">newbee</a>
+                                                       th:text="${item.goodsName}">NFTmarket</a>
                                                 </p>
                                             </td>
                                             <td class="col col-price"><p class="price"
@@ -92,8 +92,8 @@
                                         <tr>
                                             <th>Shipping Address:</th>
                                             <td class="user_address_label"
-                                                th:text="${session.newBeeMallUser.address==''?'None':session.newBeeMallUser.address}">
-                                                newbee
+                                                th:text="${session.MallUser.address==''?'None':session.MallUser.address}">
+                                                NFTmarket
                                             </td>
                                         </tr>
                                     </tbody>
@@ -148,10 +148,10 @@
                     <div class="modal-body">
                         <form id="personalInfoForm">
                             <div class="form-group">
-                                <input type="hidden" id="userId" th:value="${session.newBeeMallUser.userId}">
+                                <input type="hidden" id="userId" th:value="${session.MallUser.userId}">
                                 <label for="address" class="control-label">Shipping Address:</label>
                                 <input type="text" class="form-control" id="address" name="address"
-                                    placeholder="Please enter the shipping address" th:value="${session.newBeeMallUser.address}"
+                                    placeholder="Please enter the shipping address" th:value="${session.MallUser.address}"
                                     required="true">
                             </div>
                         </form>

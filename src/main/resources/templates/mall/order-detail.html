@@ -48,14 +48,14 @@
 
                                 <div class="order-summary">
                                     <div class="order-status" th:text="${orderDetailVO.orderStatusString}">
-                                        newbee
+                                        NFTmarket
                                     </div>
                                     <div class="order-desc">
                                         <th:block th:if="${orderDetailVO.orderStatus==0}">Please complete the payment as soon as possible~</th:block>
-                                        <th:block th:if="${orderDetailVO.orderStatus==1}">NewBee Mall order is being confirmed~</th:block>
-                                        <th:block th:if="${orderDetailVO.orderStatus==2}">NewBee warehouse is urgently preparing the shipment~</th:block>
+                                        <th:block th:if="${orderDetailVO.orderStatus==1}">NFTmarket order is being confirmed~</th:block>
+                                        <th:block th:if="${orderDetailVO.orderStatus==2}">NFTmarket warehouse is urgently preparing the shipment~</th:block>
                                         <th:block th:if="${orderDetailVO.orderStatus==3}">Order has been shipped and is on its way to you~</th:block>
-                                        <th:block th:if="${orderDetailVO.orderStatus==4}">Transaction successful, thank you for your support to NewBee Mall~
+                                        <th:block th:if="${orderDetailVO.orderStatus==4}">Transaction successful, thank you for your support to NFTmarket~
                                         </th:block>
                                         <th:block th:if="${orderDetailVO.orderStatus<0}">Transaction closed~</th:block>
                                     </div>
@@ -127,7 +127,7 @@
                                 </div>
                                 <table class="order-items-table">
                                     <tbody>
-                                    <th:block th:each="item : ${orderDetailVO.newBeeMallOrderItemVOS}">
+                                    <th:block th:each="item : ${orderDetailVO.newOrderItemVOS}">
                                         <tr>
                                             <td class="col col-thumb">
                                                 <div class="figure figure-thumb">
@@ -140,7 +140,7 @@
                                             <td class="col col-name">
                                                 <p class="name">
                                                     <a target="_blank" th:href="@{'/goods/detail/'+${item.goodsId}}"
-                                                       th:text="${item.goodsName}">newbee</a>
+                                                       th:text="${item.goodsName}">NFTmarket</a>
                                                 </p>
                                             </td>
                                             <td class="col col-price"><p class="price"
@@ -158,7 +158,7 @@
                                 <table class="info-table">
                                     <tbody>
                                         <tr>
-                                            <td th:text="${orderDetailVO.userAddress}">newbee</td>
+                                            <td th:text="${orderDetailVO.userAddress}">NFTmarket</td>
                                         </tr>
                                     </tbody>
                                 </table>
