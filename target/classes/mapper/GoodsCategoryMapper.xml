@@ -16,7 +16,7 @@
     <sql id="Base_Column_List">
     category_id, category_level, parent_id, category_name, category_rank, is_deleted, 
     create_time, create_user, update_time, update_user
-  </sql>
+    </sql>
     <select id="findGoodsCategoryList" parameterType="Map" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>

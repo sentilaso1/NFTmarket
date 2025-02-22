@@ -77,7 +77,7 @@ function validPhoneNumber(phone) {
 }
 
 /**
- * Regular Expression to Match 2-18 Character Chinese and English Strings
+ * Regular Expression to Match 2-18 Character English Strings
  *
  * @param str
  * @returns {boolean}
@@ -92,7 +92,7 @@ function validCN_ENString2_18(str) {
 }
 
 /**
- * Regular Expression to Match 2-100 Character Chinese and English Strings
+ * Regular Expression to Match 2-100 Character English Strings
  *
  * @param str
  * @returns {boolean}
@@ -107,7 +107,7 @@ function validCN_ENString2_100(str) {
 }
 
 /**
- * Regular Expression to Match 2-100 Character Chinese and English Strings
+ * Regular Expression to Match 2-100 Character English Strings
  *
  * @param str
  * @returns {boolean}
