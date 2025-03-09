@@ -8,7 +8,7 @@ $(function () {
         colModel: [
             {label: 'id', name: 'categoryId', index: 'categoryId', width: 50, key: true, hidden: true},
             {label: 'Category Name', name: 'categoryName', index: 'categoryName', width: 240},
-            {label: 'Sort Value', name: 'categoryRank', index: 'categoryRank', width: 120},
+            {label: 'Rank', name: 'categoryRank', index: 'categoryRank', width: 120},
             {label: 'Creation Time', name: 'createTime', index: 'createTime', width: 120}
         ],
         height: 560,
