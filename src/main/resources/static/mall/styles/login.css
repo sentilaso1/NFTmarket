@@ -124,3 +124,7 @@ body {
     cursor: pointer;
     border-radius: 4px;
 }
+
+.login-info-input{
+   float: right;
+}

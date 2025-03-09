@@ -45,8 +45,8 @@ CREATE TABLE `tb_carousel` (
 -- ----------------------------
 -- Records of tb_carousel
 -- ----------------------------
-INSERT INTO `tb_carousel` VALUES (2, 'https://newbee-mall.oss-cn-beijing.aliyuncs.com/images/banner1.png', 'https://juejin.im/book/5da2f9d4f265da5b81794d48/section/5da2f9d6f265da5b794f2189', 13, 0, '2019-11-29 00:00:00', 0, '2019-11-29 00:00:00', 0);
-INSERT INTO `tb_carousel` VALUES (5, 'https://newbee-mall.oss-cn-beijing.aliyuncs.com/images/banner2.png', 'https://juejin.im/book/5da2f9d4f265da5b81794d48/section/5da2f9d6f265da5b794f2189', 0, 0, '2019-11-29 00:00:00', 0, '2019-11-29 00:00:00', 0);
+INSERT INTO `tb_carousel` VALUES (2, '', 'https://juejin.im/book/5da2f9d4f265da5b81794d48/section/5da2f9d6f265da5b794f2189', 13, 0, '2019-11-29 00:00:00', 0, '2019-11-29 00:00:00', 0);
+INSERT INTO `tb_carousel` VALUES (5, '', 'https://juejin.im/book/5da2f9d4f265da5b81794d48/section/5da2f9d6f265da5b794f2189', 0, 0, '2019-11-29 00:00:00', 0, '2019-11-29 00:00:00', 0);
 
 -- ----------------------------
 -- Table structure for tb_goods_category
@@ -979,5 +979,5 @@ PRIMARY KEY (`user_id`) USING BTREE ) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACT
 -- ----------------------------
 INSERT INTO `tb_user` VALUES (1, 'GayLord', '13700002703', 'e10adc3949ba59abbe56e057f20f883e', 'I am not afraid of thousands of people blocking me, I am only afraid of surrendering myself', 'Xinzhuan District, xx Community, xx Building 419, 137xxxx2703', 0, 0, '2019-09-22 08:44:57');
 INSERT INTO `tb_user` VALUES (6, 'Test User 1', '13711113333', 'dda01dc6d334badcd031102be6bee182', 'Test User 1', 'No. XX, XX Road, Pudong New Area, Shanghai 999 137xxxx7797', 0, 0, '2019-08-29 10:51:39');
-INSERT INTO `tb_user` VALUES (7, 'Test user 2 Test user 2 Test user 2 Test user 2', '13811113333', 'dda01dc6d334badcd031102be6bee182', 'Test user 2', '419, Building X, XX Community, Xihu District, Hangzhou 137xxxx2703', 0, 0, '2019-08-29 10:55:08');
+INSERT INTO `tb_user` VALUES (7, 'Test user 2', '13811113333', 'dda01dc6d334badcd031102be6bee182', 'Test user 2', '419, Building X, XX Community, Xihu District, Hangzhou 137xxxx2703', 0, 0, '2019-08-29 10:55:08');
 INSERT INTO `tb_user` VALUES (8, 'Test user 3', '13911113333', 'dda01dc6d334badcd031102be6bee182', 'Test user 3', 'Room 419, Building x, xx Community, Xihu District, Hangzhou, 137xxxx2703', 0, 0, '2019-08-29 10:55:16');
