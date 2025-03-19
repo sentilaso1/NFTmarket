@@ -1,4 +1,4 @@
-var newbeeSwiper = new Swiper('.swiper-container', {
+var marketSwiper = new Swiper('.swiper-container', {
     // Set autoplay
     autoplay: {
         delay: 3000,

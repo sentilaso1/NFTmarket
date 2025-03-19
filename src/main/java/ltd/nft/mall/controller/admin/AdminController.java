@@ -23,11 +23,6 @@ public class AdminController {
         return "admin/login";
     }
 
-    @GetMapping({"/test"})
-    public String test() {
-        return "admin/test";
-    }
-
 
     @GetMapping({"", "/", "/index", "/index.html"})
     public String index(HttpServletRequest request) {

@@ -45,8 +45,8 @@ CREATE TABLE `tb_carousel` (
 -- ----------------------------
 -- Records of tb_carousel
 -- ----------------------------
-INSERT INTO `tb_carousel` VALUES (2, '', 'https://juejin.im/book/5da2f9d4f265da5b81794d48/section/5da2f9d6f265da5b794f2189', 13, 0, '2019-11-29 00:00:00', 0, '2019-11-29 00:00:00', 0);
-INSERT INTO `tb_carousel` VALUES (5, '', 'https://juejin.im/book/5da2f9d4f265da5b81794d48/section/5da2f9d6f265da5b794f2189', 0, 0, '2019-11-29 00:00:00', 0, '2019-11-29 00:00:00', 0);
+INSERT INTO `tb_carousel` VALUES (2, 'https://www.bing.com/images/search?view=detailV2&ccid=b3sjv0CL&id=7D26D33FBA72F3EDF479800FF7150D4AC9AC609E&thid=OIP.b3sjv0CLKAudToJw73j4ZwHaFz&mediaurl=https%3a%2f%2fmitechnews.com%2fwp-content%2fuploads%2f2018%2f02%2fandroid-smartphone.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.6f7b23bf408b280b9d4e8270ef78f867%3frik%3dnmCsyUoNFfcPgA%26pid%3dImgRaw%26r%3d0&exph=1220&expw=1557&q=phone+image&simid=607999376780692110&FORM=IRPRST&ck=66C38C48019956DB59BEA08740F4C73F&selectedIndex=13&itb=0', '', 13, 0, '2019-11-29 00:00:00', 0, '2019-11-29 00:00:00', 0);
+INSERT INTO `tb_carousel` VALUES (5, 'https://www.bing.com/images/search?view=detailV2&ccid=QMnrF8S8&id=66DDD1ABE1416600C23D128D1F8BCAEDD9536BD2&thid=OIP.QMnrF8S83wwNLMbEsVvohAHaEK&mediaurl=https%3a%2f%2fexpertpakistani.b-cdn.net%2fwp-content%2fuploads%2f2023%2f09%2fiPhone-15-All-In-One-Detailed-Review-September-2023.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.40c9eb17c4bcdf0c0d2cc6c4b15be884%3frik%3d0mtT2e3Kix%252bNEg%26pid%3dImgRaw%26r%3d0&exph=1439&expw=2560&q=iPhone+15+Phone&simid=608037597699509553&FORM=IRPRST&ck=92EF0E47CB2539B372271C80795D0EBB&selectedIndex=7&itb=0', '', 0, 0, '2019-11-29 00:00:00', 0, '2019-11-29 00:00:00', 0);
 
 -- ----------------------------
 -- Table structure for tb_goods_category
@@ -838,7 +838,8 @@ INSERT INTO `tb_index_config` VALUES (10, 'Elysees Velvet Lipstick', 5, 10233, '
 INSERT INTO `tb_index_config` VALUES (11, 'MAC Matte Series', 5, 10237, '##', 100, 0, '2019-09-18 17:47:44', 0, '2019-09-18 17:47:44', 0); 
 INSERT INTO `tb_index_config` VALUES (12, 'Sony WH-1000XM3', 5, 10195, '##', 102, 0, '2019-09-18 17:48:00', 0, '2019-09-18 17:48:00', 0); 
 INSERT INTO `tb_index_config` VALUES (13, 'Apple AirPods', 5, 10180, '##', 101, 0, '2019-09-18 17:49:11', 0, '2019-09-18 17:49:11', 0); 
-INSERT INTO `tb_index_config` VALUES (14, 'Xiaomi Redmi AirDots', 5, 10160, '##', 100, 0, '2019-09-18 17:49:28', 0, '2019-09-18 17:49:28', 0); INSERT INTO `tb_index_config` VALUES (15, '2019 MacBookAir 13', 5, 10254, '##', 100, 0, '2019-09-18 17:50:18', 0, '2019-09-18 17:50:18', 0);
+INSERT INTO `tb_index_config` VALUES (14, 'Xiaomi Redmi AirDots', 5, 10160, '##', 100, 0, '2019-09-18 17:49:28', 0, '2019-09-18 17:49:28', 0); 
+INSERT INTO `tb_index_config` VALUES (15, '2019 MacBookAir 13', 5, 10254, '##', 100, 0, '2019-09-18 17:50:18', 0, '2019-09-18 17:50:18', 0);
 INSERT INTO `tb_index_config` VALUES (16, 'Womens Cotton Striped Long-sleeved T-shirt', 5, 10158, '##', 99, 0, '2019-09-18 17:52:03', 0, '2019-09-18 17:52:03', 0);
 INSERT INTO `tb_index_config` VALUES (17, 'Plastic bathroom seat', 5, 10154, '##', 100, 0, '2019-09-18 17:52:19', 0, '2019-09-18 17:52:19', 0);
 INSERT INTO `tb_index_config` VALUES (18, 'cushion', 5, 10147, '##', 101, 0, '2019-09-18 17:52:50', 0, '2019-09-18 17:52:50', 0);
